@@ -1,14 +1,14 @@
 config:
-  target: http://shrawan.xyz
+  target: https://shrawan.xyz
   phases:
     - duration: 60
       arrivalRate: 1
       rampTo: 5
       name: Warm up phase
-  plugins:
-    ensure: {}
-    apdex: {}
-    metrics-by-endpoint: {}
+    - duration: 60
+      arrivalRate: 5
+      rampTo: 10
+      name: Splike phase
   apdex:
     threshold: 100
   ensure:
